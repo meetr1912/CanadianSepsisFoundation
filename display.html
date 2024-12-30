@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQuery TE | Downloaded Demo | v.1.4.0</title>
+
+  <link type="text/css" rel="stylesheet" href="demo.css">
+  <link type="text/css" rel="stylesheet" href="jquery-te-1.4.0.css">
+
+  <script type="text/javascript" src="jquery.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="jquery-te-1.4.0.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+  <form action="submit.php" method="post" enctype="multipart/form-data">
+
+    <label for="title">Title:</label><br />
+    <input name="title" id="title" type="text" maxlength="150" />
+    <div class="clear"></div>
+
+    <label for="textarea">Story:</label><br />
+    <textarea name="textarea" class="jqte-test"><b>My contents are from <u><span style="color:rgb(0, 148, 133);">TEXTAREA</span></u></b></textarea>
+
+    <div class="clear"></div>
+
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
+    <div class="clear"></div>
+    <input type="submit" value="Create This Entry!" />
+  </form>
+
+  <!------------------------------------------------------------ jQUERY TEXT EDITOR ------------------------------------------------------------>
+
+
+  <script>
+    $('.jqte-test').jqte();
+
+    // settings of status
+    var jqteStatus = true;
+    $(".status").click(function () {
+      jqteStatus = jqteStatus ? false : true;
+      $('.jqte-test').jqte({
+        "status": jqteStatus
+      })
+    });
+  </script>
+
+  <!------------------------------------------------------------ jQUERY TEXT EDITOR ------------------------------------------------------------>
+
+
+  <hr>
+
+</body>
+
+</html>
